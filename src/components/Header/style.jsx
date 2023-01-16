@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darkMode } from "../../utils/styles/color";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -15,37 +16,81 @@ const StyledHeader = styled.header`
 //Left Column
 const LeftColumn = styled.div`
   gap: 1em;
-  button {
-    display: inline-block;
-    color: currentColor;
-    border: none;
-    border-radius: 100%;
-    background-color: transparent;
-    height: 40px;
-    width: 40px;
-    padding: 8px;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
   .logo-container {
     display: flex;
     font-size: 2em;
     cursor: pointer;
-    span {
-      color: #aaaaaa;
-      position: relative;
-      bottom: 5px;
-      left: 4px;
-      font-size: 10px;
-      font-weight: 100;
+    height: 20px;
+    min-width: 90px;
+    a {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      justify-content: center;
+      .youtube-logo {
+        height: 100%;
+      }
+      span {
+        color: #aaaaaa;
+        position: relative;
+        bottom: 10px;
+        left: 4px;
+        font-size: 10px;
+        font-weight: 100;
+      }
     }
   }
 `;
 
-const RightColumn = styled.div``;
+const CenterColumn = styled.div`
+  gap: 0.5em;
+  flex: 0 1 700px;
+  margin-left: 40px;
+  form {
+    display: flex;
+    height: 40px;
+    flex: 1;
+    .form-control {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 2.5em 0 0 2.5em;
+      background-color: rgba(255, 255, 255, 0.01);
+      border: 1px solid ${darkMode.border};
+      padding: 8px 15px;
+      &.onFocus {
+        border: 1px solid ${darkMode.focusColor};
+      }
+      .search-focus {
+        margin-right: 10px;
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+    .search {
+      border-radius: 0 2.5em 2.5em 0;
+      height: 40px;
+      width: 64px;
+      border: 1px solid ${darkMode.border};
+      background-color: ${darkMode.secondBackground};
+    }
+  }
+  .micro {
+    background-color: ${darkMode.generalBackground};
+  }
+`;
 
-const CenterColumn = styled.div``;
+const RightColumn = styled.div`
+  min-width: 225px;
+  justify-content: flex-end;
+  gap: 1em;
+`;
 
 export { StyledHeader, LeftColumn, CenterColumn, RightColumn };

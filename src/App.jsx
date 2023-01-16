@@ -6,13 +6,25 @@ import {
 import Home from "./pages/Home";
 
 import styled from "styled-components";
+
 import Header from "./components/Header";
+
 import GlobalStyle from "./utils/styles/GlobalStyle";
+import { darkMode } from "./utils/styles/color";
 
 const StyledApp = styled.div`
-  color: #ffffff;
-  background-color: #0f0f0f;
+  color: ${darkMode.appColor};
+  background-color: ${darkMode.appBackground};
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    display: flex;
+    flex: 1;
+    .section-container {
+      flex: 1;
+    }
+  }
 `;
 
 const App = () => {
