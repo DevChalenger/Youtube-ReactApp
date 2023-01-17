@@ -35,7 +35,7 @@ const LeftColumn = styled.div`
         position: relative;
         bottom: 10px;
         left: 4px;
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 100;
       }
     }

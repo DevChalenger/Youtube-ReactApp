@@ -10,22 +10,29 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { CenterColumn, LeftColumn, RightColumn, StyledHeader } from "./style";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+
+import Tooltip from "@mui/material/Tooltip";
+import { SideBarContext } from "../../utils/context/sidebar";
 
 const Header = () => {
+  const { isOpen, setIsOpen } = useContext(SideBarContext);
   const [isFocus, setIsFocus] = useState(false);
   const [value, setValue] = useState("");
+
   return (
     <StyledHeader>
       <LeftColumn className="col">
-        <button>
+        <button onClick={() => setIsOpen(!isOpen)}>
           <MenuIcon />
         </button>
         <div className="logo-container">
-          <Link>
-            <Youtube className="youtube-logo" />
-            <span className="country-code">FR</span>
-          </Link>
+          <Tooltip title="Youtube Logo">
+            <Link>
+              <Youtube className="youtube-logo" />
+              <span className="country-code">FR</span>
+            </Link>
+          </Tooltip>
         </div>
       </LeftColumn>
       <CenterColumn className="col">
@@ -45,23 +52,29 @@ const Header = () => {
               ""
             )}
           </div>
-          <div>
+          <Tooltip title="Search">
             <button className="search">
               <SearchIcon />
             </button>
-          </div>
+          </Tooltip>
         </form>
-        <button className="micro">
-          <MicroIcon />
-        </button>
+        <Tooltip title="Search with your voice">
+          <button className="micro">
+            <MicroIcon />
+          </button>
+        </Tooltip>
       </CenterColumn>
       <RightColumn className="col">
-        <button>
-          <VideoCallIcon />
-        </button>
-        <button>
-          <NotificationIcon />
-        </button>
+        <Tooltip title="Create">
+          <button>
+            <VideoCallIcon />
+          </button>
+        </Tooltip>
+        <Tooltip title="Notification">
+          <button>
+            <NotificationIcon />
+          </button>
+        </Tooltip>
         <button>
           <AvatarIcon />
         </button>

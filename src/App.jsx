@@ -11,6 +11,7 @@ import Header from "./components/Header";
 
 import GlobalStyle from "./utils/styles/GlobalStyle";
 import { darkMode } from "./utils/styles/color";
+import { SideBarProvider } from "./utils/context/sidebar";
 
 const StyledApp = styled.div`
   color: ${darkMode.appColor};
@@ -30,13 +31,15 @@ const StyledApp = styled.div`
 const App = () => {
   return (
     <StyledApp className="App">
-      <GlobalStyle />
-      <Router>
-        <Header />
-        <Navigation>
-          <Route exact path="/" element={<Home />} />
-        </Navigation>
-      </Router>
+      <SideBarProvider>
+        <GlobalStyle />
+        <Router>
+          <Header />
+          <Navigation>
+            <Route exact path="/" element={<Home />} />
+          </Navigation>
+        </Router>
+      </SideBarProvider>
     </StyledApp>
   );
 };

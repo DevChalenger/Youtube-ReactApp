@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const StyledGlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family:"Roboto", "Arial", sans-serif, YT Sans;
+    font-family:"Roboto", "Noto", sans-serif
   }
   body {
     margin: 0;
@@ -13,6 +13,10 @@ const StyledGlobalStyle = createGlobalStyle`
   a{
     color:inherit;
     text-decoration:none;
+  }
+  h1,h2,h3{
+    margin:0;
+ 
   }
   button{
     color: currentColor;
@@ -32,6 +36,7 @@ const StyledGlobalStyle = createGlobalStyle`
   }
   ul{
     padding:0;
+    margin: 0;
     list-style:none;
   }
   svg{
