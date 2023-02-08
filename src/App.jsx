@@ -3,6 +3,7 @@ import {
   Route,
   Routes as Navigation,
 } from "react-router-dom";
+
 import Home from "./pages/Home";
 
 import styled from "styled-components";
@@ -14,7 +15,7 @@ import { darkMode } from "./utils/styles/color";
 import { SideBarProvider } from "./utils/context/sidebar";
 
 const StyledApp = styled.div`
-  color: ${darkMode.appColor};
+  color: ${darkMode.primaryColor};
   background-color: ${darkMode.appBackground};
   min-height: 100vh;
   display: flex;

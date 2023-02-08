@@ -16,10 +16,9 @@ const StyledGlobalStyle = createGlobalStyle`
   }
   h1,h2,h3{
     margin:0;
- 
   }
   button{
-    color: currentColor;
+    color: currentColor !important;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -30,9 +29,7 @@ const StyledGlobalStyle = createGlobalStyle`
     &:hover {
       background-color: rgba(255, 255, 255, 0.1)!important;
     }
-    &:active{
-      background-color: rgba(255, 255, 255, 0.25)!important;
-    }
+  
   }
   ul{
     padding:0;

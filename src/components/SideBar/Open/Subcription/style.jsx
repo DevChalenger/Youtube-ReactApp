@@ -5,15 +5,14 @@ const StyledSubscription = styled.section`
   h3 {
     padding: 6px 12px 4px !important;
   }
-  ul {
-    li {
-      img {
-        background-color: red;
-        border-radius: 100%;
-        height: 24px;
-      }
-    }
+`;
+
+const SubcriptionItem = styled.li`
+  img {
+    background-color: ${({ color }) => color};
+    border-radius: 100%;
+    height: 24px;
   }
 `;
 
-export { StyledSubscription };
+export { StyledSubscription, SubcriptionItem };

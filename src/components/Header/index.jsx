@@ -10,22 +10,23 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { CenterColumn, LeftColumn, RightColumn, StyledHeader } from "./style";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
-import Tooltip from "@mui/material/Tooltip";
 import { SideBarContext } from "../../utils/context/sidebar";
+import { Button, IconButton, Tooltip } from "@mui/material";
 
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SideBarContext);
   const [isFocus, setIsFocus] = useState(false);
+  const inputRef = useRef();
   const [value, setValue] = useState("");
 
   return (
     <StyledHeader>
       <LeftColumn className="col">
-        <button onClick={() => setIsOpen(!isOpen)}>
+        <IconButton onClick={() => setIsOpen(!isOpen)}>
           <MenuIcon />
-        </button>
+        </IconButton>
         <div className="logo-container">
           <Tooltip title="Youtube Logo">
             <Link>
@@ -41,13 +42,20 @@ const Header = () => {
             {isFocus && <SearchIcon className="search-focus" />}
             <input
               value={value}
+              ref={inputRef}
               placeholder="Search"
               onChange={(e) => setValue(e.target.value)}
               onFocus={() => setIsFocus(true)}
               onBlur={() => setIsFocus(false)}
             />
             {value.length ? (
-              <CloseIcon className="close" onClick={() => setValue("")} />
+              <CloseIcon
+                className="close"
+                onClick={() => {
+                  setValue("");
+                  inputRef.current.focus();
+                }}
+              />
             ) : (
               ""
             )}

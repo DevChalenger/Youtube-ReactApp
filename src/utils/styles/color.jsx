@@ -5,7 +5,7 @@ const darkMode = {
   secondBackground: "#212121",
   menuBackground: "#282828",
   border: "#303030",
-  appColor: "#ffffff",
+  primaryColor: "#F1F1F1",
 };
 const lightMode = {};
 

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const StyledSideBarOpen = styled.article`
+const StyledSideBar = styled.article`
   box-sizing: content-box;
   width: 224px;
-
+  overflow: auto;
   section {
     padding: 12px;
     h3 {
@@ -38,4 +38,4 @@ const StyledSideBarOpen = styled.article`
   }
 `;
 
-export { StyledSideBarOpen };
+export { StyledSideBar };
