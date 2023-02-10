@@ -2,37 +2,44 @@
 import {
   VideoLibraryOutlined,
   SubscriptionsOutlined,
-  SmartDisplayOutlined,
+  PhoneAndroidOutlined,
   HomeOutlined,
 } from "@mui/icons-material/";
 
 // Active Icon
 import {
   Home,
-  SmartDisplay,
+  PhoneAndroid,
   Subscriptions,
   VideoLibrary,
 } from "@mui/icons-material/";
+import { darkMode } from "../../../utils/styles/color";
 
 export const navCloseItem = [
   {
-    iconActive: <Home />,
-    iconInactive: <HomeOutlined />,
+    iconActive: <Home sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: <HomeOutlined sx={{ color: darkMode.primaryColor }} />,
     name: "Home",
   },
   {
-    iconActive: <SmartDisplay />,
-    iconInactive: <SmartDisplayOutlined />,
+    iconActive: <PhoneAndroid sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <PhoneAndroidOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Shorts",
   },
   {
-    iconActive: <Subscriptions />,
-    iconInactive: <SubscriptionsOutlined />,
+    iconActive: <Subscriptions sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <SubscriptionsOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Subscriptions",
   },
   {
-    iconActive: <VideoLibrary />,
-    iconInactive: <VideoLibraryOutlined />,
+    iconActive: <VideoLibrary sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <VideoLibraryOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Library",
   },
 ];

@@ -1,17 +1,18 @@
 // Primary inactives Icon
 import {
   HomeOutlined,
-  SmartDisplayOutlined,
+  PhoneAndroidOutlined,
   SubscriptionsOutlined,
 } from "@mui/icons-material/";
 
 // Primary actives Icon
-import { Home, SmartDisplay, Subscriptions } from "@mui/icons-material/";
+import { Home, PhoneAndroid, Subscriptions } from "@mui/icons-material/";
 
 // Secondary inactives Icon
 import {
   VideoLibraryOutlined,
   HistoryOutlined,
+  SmartDisplayOutlined,
   AccessTimeOutlined,
   PlaylistPlayOutlined,
   ThumbUpAltOutlined,
@@ -21,53 +22,70 @@ import {
 import {
   VideoLibrary,
   History,
+  SmartDisplay,
   AccessTime,
   PlaylistPlay,
   ThumbUpAlt,
 } from "@mui/icons-material/";
+import { darkMode } from "../../../../utils/styles/color";
 
 export const primaryItems = [
   {
-    iconActive: <Home />,
-    iconInactive: <HomeOutlined />,
+    iconActive: <Home sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: <HomeOutlined sx={{ color: darkMode.primaryColor }} />,
     name: "Home",
   },
   {
-    iconActive: <SmartDisplay />,
-    iconInactive: <SmartDisplayOutlined />,
+    iconActive: <PhoneAndroid sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <PhoneAndroidOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Shorts",
   },
   {
-    iconActive: <Subscriptions />,
-    iconInactive: <SubscriptionsOutlined />,
+    iconActive: <Subscriptions sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <SubscriptionsOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Subscriptions",
   },
 ];
 
 export const secondaryItems = [
   {
-    iconActive: <VideoLibrary />,
-    iconInactive: <VideoLibraryOutlined />,
+    iconActive: <VideoLibrary sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <VideoLibraryOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
     name: "Library",
   },
   {
-    iconActive: <History />,
-    iconInactive: <HistoryOutlined />,
+    iconActive: <History sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: <HistoryOutlined sx={{ color: darkMode.primaryColor }} />,
     name: "History",
   },
   {
-    iconActive: <AccessTime />,
-    iconInactive: <AccessTimeOutlined />,
+    iconActive: <SmartDisplay sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <SmartDisplayOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
+    name: "Your videos",
+  },
+  {
+    iconActive: <AccessTime sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: <AccessTimeOutlined sx={{ color: darkMode.primaryColor }} />,
     name: "Watch Later",
   },
   {
-    iconActive: <PlaylistPlay />,
-    iconInactive: <PlaylistPlayOutlined />,
-    name: "Playlist",
+    iconActive: <ThumbUpAlt sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: <ThumbUpAltOutlined sx={{ color: darkMode.primaryColor }} />,
+    name: "Liked vidéos",
   },
   {
-    iconActive: <ThumbUpAlt />,
-    iconInactive: <ThumbUpAltOutlined />,
-    name: "Liked vidéos",
+    iconActive: <PlaylistPlay sx={{ color: darkMode.primaryColor }} />,
+    iconInactive: (
+      <PlaylistPlayOutlined sx={{ color: darkMode.primaryColor }} />
+    ),
+    name: "Playlist",
   },
 ];

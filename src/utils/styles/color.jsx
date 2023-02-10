@@ -6,6 +6,7 @@ const darkMode = {
   menuBackground: "#282828",
   border: "#303030",
   primaryColor: "#F1F1F1",
+  action: "#3ea6ff",
 };
 const lightMode = {};
 

@@ -17,6 +17,9 @@ const StyledGlobalStyle = createGlobalStyle`
   h1,h2,h3{
     margin:0;
   }
+  .MuiListItemIcon-root{
+    min-width:0 !important;
+  }
   button{
     color: currentColor !important;
     border: none;
@@ -31,14 +34,10 @@ const StyledGlobalStyle = createGlobalStyle`
     }
   
   }
-  ul{
-    padding:0;
-    margin: 0;
-    list-style:none;
-  }
-  svg{
-    height:24px;
-  }
+
+ ul{
+  padding:0 !important;
+ }
   input {
     color:currentColor;
     background-color: transparent;

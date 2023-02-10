@@ -1,30 +1,21 @@
-import { Link } from "react-router-dom";
-
 import { primaryItems, secondaryItems } from "./mainItems";
+
+import { List } from "@mui/material";
+import ListItemNav from "../../ListItemNav";
 
 const Main = () => {
   return (
     <section>
-      <ul>
+      <List>
         {primaryItems.map((item, index) => (
-          <li key={index}>
-            <Link>
-              {item.iconInactive}
-              <span>{item.name}</span>
-            </Link>
-          </li>
+          <ListItemNav key={index} item={item} />
         ))}
-      </ul>
-      <ul className="collapse">
+      </List>
+      <List className="collapse">
         {secondaryItems.map((item, index) => (
-          <li key={index}>
-            <Link>
-              {item.iconInactive}
-              <span>{item.name}</span>
-            </Link>
-          </li>
+          <ListItemNav key={index} item={item} />
         ))}
-      </ul>
+      </List>
     </section>
   );
 };
