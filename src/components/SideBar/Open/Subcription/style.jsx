@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const StyledSubscription = styled.section`
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-`;
+const StyledSubscription = styled.section``;
 
 const SubcriptionItem = styled.li`
   img {

@@ -12,7 +12,7 @@ import { StyledSubscription /* SubcriptionItem */ } from "./style";
 const Subscription = () => {
   /*   const [isShowMore, setIsShowMore] = useState(false); */
   return (
-    <StyledSubscription>
+    <StyledSubscription className="unique">
       <Box
         sx={{
           padding: "16px 20px",

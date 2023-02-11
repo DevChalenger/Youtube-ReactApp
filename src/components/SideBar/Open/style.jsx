@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 const StyledSideBarOpen = styled.nav`
   width: 224px;
-  section {
+  section,
+  footer {
+    &.unique {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
     padding: 12px;
   }
   ul {

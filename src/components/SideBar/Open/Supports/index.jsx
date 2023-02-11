@@ -1,13 +1,12 @@
 import { List } from "@mui/material";
 import ListItemNav from "../../ListItemNav";
-import { exploreNavItems } from "./exploreItems";
+import { supportNavItems } from "./supportItems";
 
-const Explore = () => {
+const Supports = () => {
   return (
     <section className="unique">
-      <h3>Explore</h3>
       <List>
-        {exploreNavItems.map((item, index) => (
+        {supportNavItems.map((item, index) => (
           <ListItemNav key={index} item={item} />
         ))}
       </List>
@@ -15,4 +14,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default Supports;

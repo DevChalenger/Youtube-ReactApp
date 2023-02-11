@@ -1,8 +1,22 @@
 import { createGlobalStyle } from "styled-components";
+import { darkMode } from "./color";
 
 const StyledGlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: rgb(100,100,100);
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0);
+    }
     font-family:"Roboto", "Noto", sans-serif
   }
   body {
@@ -44,7 +58,9 @@ const StyledGlobalStyle = createGlobalStyle`
     border:none;
     outline:none;
   }
-  
+  .MuiSvgIcon-root{
+    color : ${darkMode.primaryColor};
+  }
 `;
 
 const GlobalStyle = () => {
