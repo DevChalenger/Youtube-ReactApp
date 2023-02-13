@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const StyledSideBarOpen = styled.nav`
-  width: 224px;
+  width: 240px;
+
   section,
   footer {
     &.unique {
@@ -17,7 +18,7 @@ const StyledSideBarOpen = styled.nav`
     }
     li {
       height: 40px;
-      a {
+      .MuiListItemButton-root {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;

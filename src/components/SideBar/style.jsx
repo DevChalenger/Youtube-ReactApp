@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledSideBar = styled.article`
   height: calc(100vh - 56px);
-  width: 240px;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -23,12 +22,14 @@ const StyledSideBar = styled.article`
   }
   li {
     padding: 0;
-    a {
-      display: flex;
-    }
   }
   .MuiListItemButton-root {
+    padding: 6px;
     padding-left: 12px;
+    display: flex;
+  }
+  a {
+    width: 100%;
   }
 `;
 

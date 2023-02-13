@@ -8,7 +8,7 @@ const StyledSideBarClose = styled.nav`
       .MuiListItemButton-root {
         padding: 0;
       }
-      a {
+      .MuiListItemButton-root {
         width: 100%;
         padding: 16px 0 14px;
         flex-direction: column;

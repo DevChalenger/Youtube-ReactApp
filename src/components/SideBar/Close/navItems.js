@@ -18,21 +18,25 @@ export const navCloseItem = [
   {
     iconActive: <Home />,
     iconInactive: <HomeOutlined />,
+    link: "/",
     name: "Home",
   },
   {
     iconActive: <PhoneAndroid />,
     iconInactive: <PhoneAndroidOutlined />,
+    link: "/short",
     name: "Shorts",
   },
   {
     iconActive: <Subscriptions />,
     iconInactive: <SubscriptionsOutlined />,
+    link: "/feed/subscriptions",
     name: "Subscriptions",
   },
   {
     iconActive: <VideoLibrary />,
     iconInactive: <VideoLibraryOutlined />,
+    link: "/feed/library",
     name: "Library",
   },
 ];

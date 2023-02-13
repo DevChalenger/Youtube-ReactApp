@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import GlobalStyle from "./utils/styles/GlobalStyle";
 import { darkMode } from "./utils/styles/color";
 import { SideBarProvider } from "./utils/context/sidebar";
+import SideBar from "./components/SideBar";
+import CustomNavigationLoader from "./utils/CustomNavigationLoader";
 
 const StyledApp = styled.div`
   color: ${darkMode.primaryColor};
@@ -36,9 +38,12 @@ const App = () => {
         <GlobalStyle />
         <Router>
           <Header />
-          <Navigation>
-            <Route exact path="/" element={<Home />} />
-          </Navigation>
+          <main>
+            <SideBar />
+            <CustomNavigationLoader>
+              <Route exact path="/" element={<Home />} />
+            </CustomNavigationLoader>
+          </main>
         </Router>
       </SideBarProvider>
     </StyledApp>
